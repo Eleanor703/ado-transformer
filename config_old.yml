@@ -1,0 +1,37 @@
+transformer:
+  # model configurations
+  use_sin_cos: True
+  sequence_emb_size: 512
+  position_hidden_size: 512
+  attention_hidden_size: 512
+  feed_forward_in_hidden_size: 2048
+  feed_forward_out_hidden_size: 512
+  pre_emb: False
+  lr: 0.0001
+  enc_dropout: 0.1
+  dec_dropout: 0.1
+  head_dropout: 0.1
+  num_blocks: 3
+  num_heads: 4
+
+
+
+  #  train configurations
+  batch_size: 10
+#  max_steps: None
+  encode_max_length: 500
+  decode_max_length: 20
+  vocab_size: 50000
+  vocab_file: 'data/nltk_vocab.txt'
+  encode_feature_name:  'encode_feature_name'
+  decode_feature_name:  'decode_feature_name'
+  log_level:  INFO
+  gpu_cores:  '6'
+  allow_soft_placement: True
+  per_process_gpu_memory_fraction:  0.9
+  allow_growth: True
+  label_smoothing: 0.1
+
+  #   data config
+  data_dir: 'data'
+  file_prefix:  '*.txt'

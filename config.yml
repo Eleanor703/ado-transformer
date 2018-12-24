@@ -1,0 +1,155 @@
+transformer_01:
+  vocab_size: 50000
+  initializer_gain: 1.0
+  encoder_dropout: 0.1
+  attention_dropout: 0.1
+  layer_postprocess_dropout: 0.1
+  encoder_decoder_dropout:  0.1
+  relu_dropout: 0.1
+
+  hidden_size: 1024
+  num_blocks: 6
+  num_heads: 8
+  filter_size: 2048
+
+  allow_ffn_pad: True
+  max_decode_length: 20
+  max_encode_length: 500
+  beam_size: 4
+  alpha: 0.6
+  eos_id: 3
+
+  use_dynamic_lr: False
+  learning_rate:  5.0
+  static_learning_rate:  0.0001
+  learning_rate_warmup_steps: 5000
+  optimizer_adam_beta1: 0.9
+  optimizer_adam_beta2: 0.997
+  # use eval()
+  optimizer_adam_epsilon: 1e-09
+
+  #  model save configurations
+  batch_size: 16
+  model_dir:  'result/train/'
+  save_checkpoints_steps: 500
+  keep_checkpoint_max:  3
+  throttle_secs: 2400
+  log_step_count_steps: 100
+
+  vocab_file: 'data/nltk_vocab.txt'
+  encode_feature_name:  'encode_feature_name'
+  log_level:  'info'
+  gpu_cores:  '3,4,5'
+  allow_soft_placement: True
+  per_process_gpu_memory_fraction:  0.9
+  allow_growth: True
+  label_smoothing: 0.1
+
+  #   data config
+  data_dir: 'data'
+  file_prefix:  '*.txt'
+
+
+transformer_02:
+  vocab_size: 50000
+  hidden_size: 512
+  initializer_gain: 1.0
+  encoder_dropout: 0.1
+  attention_dropout: 0.1
+  layer_postprocess_dropout: 0.1
+  encoder_decoder_dropout:  0.1
+  relu_dropout: 0.1
+
+  num_blocks: 2
+  num_heads: 2
+  filter_size: 512
+
+  allow_ffn_pad: True
+  max_decode_length: 20
+  max_encode_length: 500
+  beam_size: 4
+  alpha: 0.6
+  eos_id: 3
+
+  use_dynamic_lr: False
+  learning_rate:  5.0
+  static_learning_rate:  0.0001
+  learning_rate_warmup_steps: 5000
+  optimizer_adam_beta1: 0.9
+  optimizer_adam_beta2: 0.997
+  # use eval()
+  optimizer_adam_epsilon: 1e-09
+
+  #  model save configurations
+  batch_size: 128
+  model_dir:  'result/train/'
+  save_checkpoints_steps: 500
+  keep_checkpoint_max:  3
+  throttle_secs: 2400
+  log_step_count_steps: 100
+
+  vocab_file: 'data/nltk_vocab.txt'
+  encode_feature_name:  'encode_feature_name'
+  log_level:  'info'
+  gpu_cores:  '2'
+  allow_soft_placement: True
+  per_process_gpu_memory_fraction:  0.9
+  allow_growth: True
+  label_smoothing: 0.1
+
+  #   data config
+  data_dir: 'data'
+  file_prefix:  '*.txt'
+
+
+
+transformer_03:
+  vocab_size: 50000
+  initializer_gain: 1.0
+  encoder_dropout: 0.1
+  attention_dropout: 0.1
+  layer_postprocess_dropout: 0.1
+  encoder_decoder_dropout:  0.1
+  relu_dropout: 0.1
+
+  hidden_size: 512
+  num_blocks: 6
+  num_heads: 16
+  filter_size: 512
+
+  allow_ffn_pad: True
+  max_decode_length: 20
+  max_encode_length: 500
+  beam_size: 4
+  alpha: 0.6
+  eos_id: 3
+
+  use_dynamic_lr: False
+  learning_rate:  5.0
+  static_learning_rate:  0.0001
+  learning_rate_warmup_steps: 5000
+  optimizer_adam_beta1: 0.9
+  optimizer_adam_beta2: 0.997
+  # use eval()
+  optimizer_adam_epsilon: 1e-09
+
+  #  model save configurations
+  batch_size: 16
+  model_dir:  'result/train/'
+  save_checkpoints_steps: 500
+  keep_checkpoint_max:  3
+  throttle_secs: 2400
+  log_step_count_steps: 100
+
+  vocab_file: 'data/nltk_vocab.txt'
+  encode_feature_name:  'encode_feature_name'
+  log_level:  'info'
+  gpu_cores:  '6,7'
+  allow_soft_placement: True
+  per_process_gpu_memory_fraction:  0.9
+  allow_growth: True
+  label_smoothing: 0.1
+
+  #   data config
+  data_dir: 'data'
+  file_prefix:  '*.txt'
