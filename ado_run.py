@@ -4,7 +4,7 @@
 @file: ado_train.py
 @time: 2018/11/1 16:58
 """
-__author__ = '🍊 Adonis Wu 🍊'
+
 import tensorflow as tf
 
 import utils.ado_utils as util
@@ -19,11 +19,10 @@ def train():
     util.enrich_params(params)
 
     log_level = 'tf.logging.{}'.format(str(params.get('log_level')).upper())
-    tf.logging.set_verbosity(eval(log_level))
 
+    tf.logging.set_verbosity(eval(log_level))
     #   config check_steps and max to keep
     config = util.load_sess_config(params)
-
     estimator = tf.estimator.Estimator(
         model_fn=model_fn,
         model_dir=params.get('model_dir'),

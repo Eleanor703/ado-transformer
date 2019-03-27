@@ -6,9 +6,11 @@
 """
 __author__ = '🍊 Adonis Wu 🍊'
 import tensorflow as tf
+
 tf.enable_eager_execution()
-A = tf.ones(shape=[2,3,4])
-print(A)
-b = tf.reshape(A, [2,3,2,2])
-c = tf.transpose(b, [0,2,1,3])
+a = tf.ones(shape=[3,4])
+b = tf.ones(shape=[1,4])
+
+c = tf.add(a,b)
+
 print(c)

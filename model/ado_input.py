@@ -17,7 +17,6 @@ class AdoInput():
 
     def __init__(self, params: dict):
         self.data_dir = params.get('data_dir')
-        self.encode_feature_name = params.get('encode_feature_name')
         self.encode_max_length = params.get('max_encode_length')
         self.decode_max_length = params.get('max_decode_length')
         self.batch_size = params.get('batch_size')

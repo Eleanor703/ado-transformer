@@ -47,6 +47,7 @@ data = [[0.1, 0.2, 0.3, 0.4, 0.5],
         [0.1, 0.2, 0.3, 0.4, 0.5],
         [0.5, 0.4, 0.3, 0.2, 0.1]]
 data = array(data)
+print(data)
 # decode sequence
 result = beam_search_decoder(data, 3)
 # print result
